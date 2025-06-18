@@ -6,18 +6,18 @@
 /*   By: yalshoma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 14:46:56 by yalshoma          #+#    #+#             */
-/*   Updated: 2025/06/18 15:07:34 by yalshoma         ###   ########.fr       */
+/*   Updated: 2025/06/18 17:31:25 by yalshoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
 
-void ft_putchar(char c)
+void	ft_putchar(char c)
 {
-write(1, &c, 1);
+	write(1, &c, 1);
 }
 /*
 int main(void){
 	ft_putchar('A');
 	return 0;
 }
-	
+*/	

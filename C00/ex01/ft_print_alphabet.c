@@ -6,21 +6,25 @@
 /*   By: yalshoma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 15:21:04 by yalshoma          #+#    #+#             */
-/*   Updated: 2025/06/18 16:44:37 by yalshoma         ###   ########.fr       */
+/*   Updated: 2025/06/18 17:40:07 by yalshoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-void	ft_print_alphabet(void){
-char	c;
-c = 'a';
-while(c<='z'){
-write(1,&c,1);
-c++;
-}
-}
 
+void	ft_print_alphabet(void)
+{
+	char	c;
+
+	c = 'a';
+	while (c <= 'z')
+	{
+		write(1, &c, 1);
+		c++;
+	}
+}
+/*
 int	main(void){
 	return 0;
 }
-
+*/

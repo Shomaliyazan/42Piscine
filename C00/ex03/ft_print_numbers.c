@@ -6,20 +6,26 @@
 /*   By: yalshoma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 16:28:01 by yalshoma          #+#    #+#             */
-/*   Updated: 2025/06/18 16:34:20 by yalshoma         ###   ########.fr       */
+/*   Updated: 2025/06/18 17:44:19 by yalshoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-	void ft_print_numbers(void){
-	char	n;
-	n='0';
 
-	while(n<='9'){
-		write(1,&n,1);
+void	ft_print_numbers(void)
+{
+	char	n;
+
+	n = '0';
+	while (n <= '9')
+	{
+		write(1, &n, 1);
 		n++;
 	}
-	}
-int main(void){
+}
+/*
+int	main(void)
+{
 	return 0;
 }
+*/
