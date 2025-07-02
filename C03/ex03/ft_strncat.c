@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: shomali <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/02 22:14:02 by shomali           #+#    #+#             */
-/*   Updated: 2025/07/02 22:14:05 by shomali          ###   ########.fr       */
+/*   Created: 2025/07/02 22:35:36 by shomali           #+#    #+#             */
+/*   Updated: 2025/07/02 22:57:07 by shomali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	int	len;
 	unsigned int	i;
+	int		len;
 
 	i = 0;
 	len = 0;
@@ -35,10 +35,10 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 }
 /*
 int main(){
-	char dest[] = "wasup";
-	char src[]= "folks of 42";
-	unsigned int nb = 15;
-	printf("%s\n", ft_strncat(dest, src, nb));
-	return 0;
+        char dest[] = "wasup";
+        char src[]= "folks of 42";
+        unsigned int nb = 15;
+        printf("%s\n", ft_strncat(dest, src, nb));
+        return 0;
 }
 */
