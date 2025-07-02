@@ -1,31 +1,34 @@
-#include <unistd.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_str_is_uppercase.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yalshoma <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/06/26 14:59:49 by yalshoma          #+#    #+#             */
+/*   Updated: 2025/06/26 15:00:48 by yalshoma         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <unsitd.h>
 //#include <stdio.h>
 
 int	ft_str_is_uppercase(char *str)
 {
-	int i;
-	int uppercase;
+	int	i;
 
 	i = 0;
-	uppercase = 1;
 	while (str[i] != '\0')
 	{
-		uppercase = 0;
-		if(str[i] >= 'A' && str[i] <= 'Z')
-			uppercase = 1;
-		else
-			break;
+		if (!(str[i] >= 'a' && str[i] <= 'z'))
+			return (0);
 		i++;
 	}
-	return (uppercase);
+	return (1);
 }
 /*
-int	main(void)
-{
-    printf("'HELLO' %d\n", ft_str_is_uppercase("HELLO"));
-    printf("'Hello' %d\n", ft_str_is_uppercase("Hello"));
-    printf("'HELLO123' %d\n", ft_str_is_uppercase("HELLO123"));
-    printf("'HELLO!' %d\n", ft_str_is_uppercase("HELLO!"));
-    return 0;
+int main(void){
+	printf("'HELLO' %d\n", ft_str_is_uppercase("HELLO"));
+	return 0;
 }
 */

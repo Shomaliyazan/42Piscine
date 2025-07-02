@@ -1,17 +1,36 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putstr_non_printable.c                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yalshoma <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/06/26 14:14:07 by yalshoma          #+#    #+#             */
+/*   Updated: 2025/06/26 14:18:40 by yalshoma         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
-//#include <stdio.h>
 
 void	ft_putchar(char c)
 {
 	write (1, &c, 1);
 }
 
+int	len(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
+}
+
 void	ft_putstr_non_printable(char *str)
 {
 	int	i;
-	char	*hex;
 
-	hex = "0123456789abcdef";
 	i = 0;
 	while (str[i] != '\0')
 	{
@@ -20,24 +39,17 @@ void	ft_putstr_non_printable(char *str)
 		else
 		{
 			ft_putchar('\\');
-			ft_putchar(hex[(unsigned char)str[i] / 16]);
-			ft_putchar(hex[(unsigned char)str[i] % 16]);
+			ft_putchar("01234567"[str[i] / 16]);
+			ft_putchar("0123456789abcdef"[str[i] % 16]);
 		}
 		i++;
 	}
+	if (str[i] == '\0')
+		write(1, "\\00", 3);
 }
 /*
 int	main(void)
 {
-	char	str1[] = "Hello\nWorld!";
-	char	str2[] = "Hello42\nC02amazing!";
-	char	str3[] = "\x7F\x1F Test";
-
-	ft_putstr_non_printable(str1);
-	ft_putchar('\n');
-	ft_putstr_non_printable(str2);
-	ft_putchar('\n');
-	ft_putstr_non_printable(str3);
-	return (0);
+	ft_putstr_non_printable();
 }
 */
