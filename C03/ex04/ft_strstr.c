@@ -1,5 +1,5 @@
 #include <unistd.h>
-#include <stdio.h>
+//#include <stdio.h>
 
 char	*ft_strstr(char *str, char *to_find)
 {
@@ -29,4 +29,3 @@ int	main()
 	printf("%s", ft_strstr(str, to_find));
 }
 */
-
