@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shomali <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: yalshoma <marvin@42.fr>                     +#+  +:+       +#+       */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/02 22:35:36 by shomali           #+#    #+#             */
-/*   Updated: 2025/07/02 22:57:07 by shomali          ###   ########.fr       */
+/*   Created: 2025/07/02 22:35:36 by yalshoma           #+#    #+#            */
+/*   Updated: 2025/07/04 21:58:54 by yalshoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
 	unsigned int	i;
-	int		len;
+	int				len;
 
 	i = 0;
 	len = 0;

@@ -6,7 +6,7 @@
 /*   By: yalshoma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 14:14:07 by yalshoma          #+#    #+#             */
-/*   Updated: 2025/06/26 14:18:40 by yalshoma         ###   ########.fr       */
+/*   Updated: 2025/07/02 23:21:42 by yalshoma          ###   ########.fr      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,42 +14,38 @@
 
 void	ft_putchar(char c)
 {
-	write (1, &c, 1);
-}
-
-int	len(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
+	write(1, &c, 1);
 }
 
 void	ft_putstr_non_printable(char *str)
 {
-	int	i;
+	int				i;
+	unsigned char	current;
+	char			*hex;
 
+	hex = "0123456789abcdef";
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] >= 32 && str[i] <= 126)
-			ft_putchar(str[i]);
-		else
+		current = str[i];
+		if (current < 32 || current > 126)
 		{
 			ft_putchar('\\');
-			ft_putchar("01234567"[str[i] / 16]);
-			ft_putchar("0123456789abcdef"[str[i] % 16]);
+			ft_putchar(hex[current / 16]);
+			ft_putchar(hex[current % 16]);
+		}
+		else
+		{
+			ft_putchar(current);
 		}
 		i++;
 	}
-	if (str[i] == '\0')
-		write(1, "\\00", 3);
 }
 /*
-int	main(void)
+int main(void)
 {
-	ft_putstr_non_printable();
+	char str[] = "Coucou\ntu vas bien?";
+	ft_putstr_non_printable(str);
+	return (0);
 }
 */
