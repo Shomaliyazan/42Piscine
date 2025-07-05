@@ -6,13 +6,11 @@
 /*   By: yalshoma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/25 16:57:03 by yalshoma          #+#    #+#             */
-/*   Updated: 2025/06/25 16:57:04 by yalshoma         ###   ########.fr       */
+/*   Updated: 2025/07/05 15:52:26 by yalshoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 //#include <stdio.h>
-
 int	ft_strlen(char *str)
 {
 	int	i;
