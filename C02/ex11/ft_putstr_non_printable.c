@@ -40,6 +40,8 @@ void	ft_putstr_non_printable(char *str)
 		}
 		i++;
 	}
+	if (str[i] == '\0')
+		write(1, "\\00", 0);
 }
 /*
 int main(void)
