@@ -6,7 +6,7 @@
 /*   By: yalshoma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 14:14:07 by yalshoma          #+#    #+#             */
-/*   Updated: 2025/07/02 23:21:42 by yalshoma          ###   ########.fr      */
+/*   Updated: 2025/07/05 16:18:49 by yalshoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,12 +40,14 @@ void	ft_putstr_non_printable(char *str)
 		}
 		i++;
 	}
+	if(str[i] == '\0')
+		write(1,"/00",3);
 }
-/*
+
 int main(void)
 {
-	char str[] = "Coucou\ntu vas bien?";
+	char str[] = "hello\nim yazan!";
 	ft_putstr_non_printable(str);
 	return (0);
 }
-*/
+
