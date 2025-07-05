@@ -6,7 +6,7 @@
 /*   By: yalshoma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/25 16:56:26 by yalshoma          #+#    #+#             */
-/*   Updated: 2025/06/25 16:56:27 by yalshoma         ###   ########.fr       */
+/*   Updated: 2025/07/05 15:44:30 by yalshoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,11 @@
 
 void	ft_div_mod(int a, int b, int *div, int *mod)
 {
-	*div = a / b;
-	*mod = a % b;
+	if (b != 0)
+	{
+		*div = a / b;
+		*mod = a % b;
+	}
 }
 
 /*
