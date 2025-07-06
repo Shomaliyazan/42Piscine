@@ -6,7 +6,7 @@
 /*   By: yalshoma <marvin@42.fr>                     +#+  +:+       +#+       */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/02 22:11:33 by yalshoma           #+#    #+#            */
-/*   Updated: 2025/07/04 21:59:23 by yalshoma         ###   ########.fr       */
+/*   Updated: 2025/07/06 18:20:11 by yalshoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	i = 0;
 	if (dest_len >= size || size == 0)
 		return (src_len + size);
-	while (src[i] != '\0' && i < size - dest_len - 1)
+	while (src[i] != '\0' && i < (size - dest_len - 1))
 	{
 		dest[dest_len + i] = src[i];
 		i++;
