@@ -6,7 +6,7 @@
 /*   By: yalshoma <marvin@42.fr>                     +#+  +:+       +#+       */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/02 22:12:56 by yalshoma           #+#    #+#            */
-/*   Updated: 2025/07/04 21:58:11 by yalshoma         ###   ########.fr       */
+/*   Updated: 2025/07/06 18:07:29 by yalshoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@ int	ft_strcmp(char *s1, char *s2)
 	int	i;
 
 	i = 0;
-	while (s1[i] != '\0' && s2[i] != '\0')
+	while (s1[i] != '\0' || s2[i] != '\0')
 	{
 		if (s1[i] != s2[i])
 			return (s1[i] - s2[i]);
 		i++;
 	}
-	return (s1[i] - s2[i]);
+	return (0);
 }
 /*
 int	main(void)
