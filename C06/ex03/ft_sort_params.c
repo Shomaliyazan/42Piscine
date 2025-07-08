@@ -12,64 +12,62 @@
 
 #include <unistd.h>
 
-void	ft_putstr(char *s)
+int	cmp(char *arr1, char *arr2)
 {
 	int	i;
 
 	i = 0;
-	while (s[i] != '\0')
-		i++;
-	write(1, s, i);
-}
-
-int	cmp(char *s1, char *s2)
-{
-	int	i;
-
-	i = 0;
-	while (s1[i] != '\0' || s2[i] != '\0')
+	while (arr1[i] && arr2[i] && arr1[i] == arr2[i])
 	{
-		if (s1[i] > s2[i])
-			return (s1[i] - s2[i]);
-		else if (s1[i] < s2[i])
-			return (s1[i] - s2[i]);
 		i++;
 	}
-	return (0);
+	return (arr1[i] - arr2[i]);
 }
 
-void	swap(char **s1, char **s2)
+void	ft_swap(char **a, char **b)
 {
-	char	*tmp;
+	char	*temp;
 
-	tmp = *s1;
-	*s1 = *s2;
-	*s2 = tmp;
+	temp = *a;
+	*a = *b;
+	*b = temp;
+}
+
+void	cmp2(int argc, char **argv)
+{
+	int	x;
+	int	y;
+
+	x = 1;
+	while (argc > x)
+	{
+		y = x + 1;
+		while (argc > y)
+		{
+			if (cmp(argv[x], argv[y]) > 0)
+				ft_swap(&argv[x], &argv[y]);
+			++y;
+		}
+		++x;
+	}
 }
 
 int	main(int argc, char **argv)
 {
-	int	i;
-	int	j;
+	int	x;
+	int	y;
 
-	i = 1;
-	while (i < argc - 1)
+	x = 0;
+	cmp2(argc, argv);
+	while (argv[++x])
 	{
-		j = i + 1;
-		while (j < argc)
+		y = 0;
+		while (argv[x][y] != '\0')
 		{
-			if (cmp(argv[i], argv[j]) > 0)
-				swap(&argv[i], &argv[j]);
-			j++;
+			write(1, &argv[x][y], 1);
+			++y;
 		}
-		i++;
-	}
-	i = 1;
-	while (i < argc)
-	{
-		ft_putstr(argv[i]);
 		write(1, "\n", 1);
-		i++;
 	}
 	return (0);
 }
